@@ -1,0 +1,12 @@
+#include "screenmanager.hpp"
+
+ScreenManager::ScreenManager()
+{
+    
+}
+
+ScreenManager ScreenManager::getInstance()
+{
+    static ScreenManager screenManager;
+    return screenManager;
+}
