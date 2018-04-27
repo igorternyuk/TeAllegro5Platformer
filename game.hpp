@@ -1,12 +1,9 @@
 #pragma once
 
+#include "allegro5initializer.hpp"
 #include "screenmanager.hpp"
+#include "utils.hpp"
 
-#include <memory>
-#include <functional>
-
-template<typename T>
-using my_unique_ptr = std::unique_ptr<T, std::function<void(T*)>>;
 
 class Game
 {
@@ -16,7 +13,8 @@ public:
     void run();
 private:
     enum { FPS = 60 };
-    ScreenManager& mScreenManager;
+    //Allegro5Initializer initializer;
+    ScreenManager &mScreenManager;
     my_unique_ptr<ALLEGRO_DISPLAY> mDisplay;
     my_unique_ptr<ALLEGRO_TIMER> mTimer;
     my_unique_ptr<ALLEGRO_EVENT_QUEUE> mEventQueue;

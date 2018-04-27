@@ -1,9 +1,8 @@
 #include "screenmanager.hpp"
 
-ScreenManager::ScreenManager()
-{
-
-}
+ScreenManager::ScreenManager():
+    mCurrentScreen{ std::make_unique<SplashScreen>() }
+{}
 
 ScreenManager& ScreenManager::getInstance()
 {
@@ -12,8 +11,13 @@ ScreenManager& ScreenManager::getInstance()
 }
 
 void ScreenManager::initialize()
+{}
+
+void ScreenManager::addScreen(GameScreen::Ptr screen)
 {
-    mCurrentScreen = new SplashScreen();
+    mCurrentScreen->unloadContent();
+    mCurrentScreen.reset(nullptr);
+    mCurrentScreen.swap(screen);
 }
 
 void ScreenManager::loadContent()
@@ -21,9 +25,14 @@ void ScreenManager::loadContent()
     mCurrentScreen->loadContent();
 }
 
-void ScreenManager::update()
+void ScreenManager::unloadContent()
 {
-    mCurrentScreen->update();
+    mCurrentScreen->unloadContent();
+}
+
+void ScreenManager::update(ALLEGRO_EVENT event)
+{
+    mCurrentScreen->update(event);
 }
 
 void ScreenManager::render(ALLEGRO_DISPLAY *display)

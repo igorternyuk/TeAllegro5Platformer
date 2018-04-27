@@ -9,7 +9,8 @@ SOURCES += main.cpp \
     splashscreen.cpp \
     game.cpp \
     allegro5initializer.cpp \
-    inputmanager.cpp
+    inputmanager.cpp \
+    titlescreen.cpp
 
 HEADERS += \
     screenmanager.hpp \
@@ -17,4 +18,6 @@ HEADERS += \
     splashscreen.hpp \
     game.hpp \
     allegro5initializer.hpp \
-    inputmanager.hpp
+    inputmanager.hpp \
+    titlescreen.hpp \
+    utils.hpp

@@ -46,8 +46,4 @@ Allegro5Initializer::~Allegro5Initializer()
     al_uninstall_audio();
     al_uninstall_mouse();
     al_uninstall_keyboard();
-    al_shutdown_ttf_addon();
-    al_shutdown_font_addon();
-    al_shutdown_primitives_addon();
-    al_shutdown_image_addon();
 }

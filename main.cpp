@@ -13,6 +13,5 @@ int main()
     {
         std::cout << "Error " << ex.what() << " occured." << std::endl;
     }
-
     return 0;
 }
