@@ -1,11 +1,13 @@
-#ifndef GAMESCREEN_H
-#define GAMESCREEN_H
-
+#pragma once
+#include <allegro5/allegro5.h>
 
 class GameScreen
 {
 public:
-    GameScreen();
+    explicit GameScreen();
+    virtual ~GameScreen();
+    virtual void loadContent();
+    virtual void unloadContent();
+    virtual void update();
+    virtual void render(ALLEGRO_DISPLAY *display);
 };
-
-#endif // GAMESCREEN_H

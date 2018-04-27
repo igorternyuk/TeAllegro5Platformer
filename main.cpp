@@ -1,9 +1,18 @@
+#include "game.hpp"
+#include <stdexcept>
 #include <iostream>
 
-using namespace std;
-
-int main(int argc, char *argv[])
+int main()
 {
-    cout << "Hello World!" << endl;
+    try
+    {
+        Game game;
+        game.run();
+    }
+    catch(std::exception &ex)
+    {
+        std::cout << "Error " << ex.what() << " occured." << std::endl;
+    }
+
     return 0;
 }
