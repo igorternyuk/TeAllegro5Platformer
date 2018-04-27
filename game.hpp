@@ -1,4 +1,5 @@
 #pragma once
+
 #include "screenmanager.hpp"
 
 #include <memory>
@@ -15,6 +16,7 @@ public:
     void run();
 private:
     enum { FPS = 60 };
+    ScreenManager& mScreenManager;
     my_unique_ptr<ALLEGRO_DISPLAY> mDisplay;
     my_unique_ptr<ALLEGRO_TIMER> mTimer;
     my_unique_ptr<ALLEGRO_EVENT_QUEUE> mEventQueue;

@@ -25,7 +25,7 @@ Allegro5Initializer::Allegro5Initializer()
         throw std::runtime_error("Could not install ttf addon");
     }
 
-    if(al_install_keyboard())
+    if(!al_install_keyboard())
     {
         throw std::runtime_error("Could not install keyboard");
     }
