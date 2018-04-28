@@ -1,9 +1,7 @@
 #include "inputmanager.hpp"
 
 InputManager::InputManager()
-{
-
-}
+{}
 
 bool InputManager::isKeyPressed(ALLEGRO_EVENT event, int key)
 {

@@ -29,3 +29,8 @@ void GameScreen::render(ALLEGRO_DISPLAY *display)
 {
 
 }
+
+InputManager GameScreen::getInputManager() const
+{
+    return mInput;
+}

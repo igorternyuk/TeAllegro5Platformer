@@ -14,6 +14,8 @@ public:
     virtual void unloadContent();
     virtual void update(ALLEGRO_EVENT event);
     virtual void render(ALLEGRO_DISPLAY *display);
+    InputManager getInputManager() const;
+
 protected:
     InputManager mInput;
 };

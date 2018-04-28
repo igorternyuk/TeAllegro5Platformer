@@ -1,14 +1,15 @@
 #pragma once
 
+#include "utils.hpp"
 #include "allegro5initializer.hpp"
 #include "gamescreen.hpp"
 #include "titlescreen.hpp"
 #include "splashscreen.hpp"
+#include "fadeanimation.hpp"
 
 class ScreenManager
 {
 public:
-
     ~ScreenManager() {}
     enum
     {
@@ -36,8 +37,12 @@ private:
     ScreenManager& operator=(const ScreenManager&) = delete;
     ScreenManager(ScreenManager&&) = delete;
     ScreenManager&operator=(ScreenManager&&) = delete;
+    void transition();
 
 private:
     Allegro5Initializer mInitializer;
-    GameScreen::Ptr mCurrentScreen;
+    my_unique_ptr<ALLEGRO_BITMAP> mTransitionImage;
+    GameScreen::Ptr mCurrentScreen, mNewScreen;
+    FadeAnimation mFading;
+    bool mStartTransition;
 };
