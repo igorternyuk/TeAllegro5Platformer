@@ -10,7 +10,9 @@ SOURCES += main.cpp \
     game.cpp \
     allegro5initializer.cpp \
     inputmanager.cpp \
-    titlescreen.cpp
+    titlescreen.cpp \
+    animation.cpp \
+    fadeanimation.cpp
 
 HEADERS += \
     screenmanager.hpp \
@@ -20,4 +22,6 @@ HEADERS += \
     allegro5initializer.hpp \
     inputmanager.hpp \
     titlescreen.hpp \
-    utils.hpp
+    utils.hpp \
+    animation.hpp \
+    fadeanimation.hpp

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "inputmanager.hpp"
 #include <allegro5/allegro5.h>
 #include <memory>
 
@@ -13,4 +14,6 @@ public:
     virtual void unloadContent();
     virtual void update(ALLEGRO_EVENT event);
     virtual void render(ALLEGRO_DISPLAY *display);
+protected:
+    InputManager mInput;
 };

@@ -19,5 +19,4 @@ public:
 
 private:
     my_unique_ptr<ALLEGRO_FONT> mFont;
-    InputManager mInputTitle;
 };

@@ -18,6 +18,5 @@ public:
     virtual void render(ALLEGRO_DISPLAY *display);
 private:
     my_unique_ptr<ALLEGRO_FONT> mFont;
-    InputManager mInput;
 };
 
